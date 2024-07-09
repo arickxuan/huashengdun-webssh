@@ -1,4 +1,4 @@
-FROM python:3-ubuntu
+FROM python:3.9.19-bullseye
 
 LABEL maintainer='<author>'
 LABEL version='0.0.0-dev.0-build.0'
