@@ -8,7 +8,8 @@ WORKDIR /code
 
 RUN apt-get update && \
     DEBIAN_FRONTEND=noninteractive apt-get install -y libc-dev libffi-dev gcc && \
-    pip install -r requirements.txt --no-cache-dir && \
+    pip install --no-cache-dir --upgrade pip && \
+    pip install --no-cache-dir -r requirements.txt --no-warn-script-location && \
     addgroup --system webssh && \
     adduser --system --no-create-home --shell /bin/false --ingroup webssh webssh && \
     chown -R webssh:webssh /code && \
